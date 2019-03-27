@@ -18,6 +18,11 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
+  config.news = {
+    pageSize: 30,
+    serverUrl: 'https://hacker-news.firebaseio.com/v0',
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
