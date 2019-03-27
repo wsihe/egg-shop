@@ -5,7 +5,10 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
   async index() {
     const { ctx } = this;
-    ctx.body = 'hi, egg';
+    const banner = await ctx.service.home.request();
+    ctx.body = {
+      banner
+    };
   }
 }
 
